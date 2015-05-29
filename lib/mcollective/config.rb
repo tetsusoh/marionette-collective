@@ -177,7 +177,7 @@ module MCollective
       @connector = "activemq"
       @securityprovider = "Psk"
       @factsource = "Yaml"
-      @identity = Socket.gethostname
+      @identity = Socket.gethostbyname(Socket.gethostname).first
       @registration = "Agentlist"
       @registerinterval = 0
       @registration_collective = nil
